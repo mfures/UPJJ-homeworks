@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Galery</title> 
+
+ <style type="text/css">
+	h1 {
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+  
+	div.tags {
+		text-align: center;
+	}
+
+  	div.tags input {
+		background-color: #FF0000;
+		border-radius: 2px;	
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+
+	div.thumbs img {
+		border-radius: 2px;
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+  
+  div.image {
+  	text-align: center;
+  }
+ </style>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/htmlescaping.js"></script>
+	<script type="text/javascript"><!--
+	$(document).ready(
+		function () {
+			$.ajax(
+                {
+                    url : "rest/alltags",
+					data : {
+						dummy : Math.random()
+					},
+					dataType : "json",
+					success : function(data) {
+						var tags = data;
+						var html = "";
+						if (tags.length == 0) {
+							html = "No tags found";
+						} else {
+							for (var i = 0; i < tags.length; i++) {
+								html += "<input type='button' onclick='loadThumbnails(\""
+										+ htmlEscape(tags[i]) + "\")' value='" + htmlEscape(tags[i]) + "'>";
+							}
+						}
+						$("#tags").html(html);
+					}
+				}
+			)
+		}
+	);
+
+	function loadThumbnails(tag) {
+		$.ajax({
+			url : "rest/thmbs",
+			data : {
+				tag : tag,
+				dummy : Math.random()
+			},
+			dataType : "json",
+			success : function(data) {
+				console.log(3);
+				var thumbs = data;
+				var html = "";
+				for (var i = 0; i < thumbs.length; i++) {
+					html += "<img src='thmb?name=" + htmlEscape(thumbs[i])
+							+ "' onclick='loadImage(\"" + htmlEscape(thumbs[i]) + "\")'>"
+				}
+				$("#thumbs").html(html);
+				$("#image").html("");
+			}
+		});
+	}
+
+	function loadImage(name) {
+		console.log(-1)
+		$.ajax({
+			url : "rest/images",
+			data : {
+				name : name
+			},
+			dataType : "json",
+			success : function(data) {
+				console.log(2);
+				var image = data;
+				var html = "<p>" + htmlEscape(image.name) + "</p>";
+				var tags = image.tags;
+				html += "<p>Tags:</b>";
+				var first = true;
+				for (var i = 0; i < tags.length; i++) {
+					if (first) {
+						first = false;
+					} else {
+						html += ",";
+					}
+					html += " " + htmlEscape(tags[i]);
+				}
+				html += "</p>";
+				html += "<img src='image?name=" + htmlEscape(image.path) + "'>";
+				$("#image").html(html);
+			}
+		});
+	}
+	//--></script>
+</head>
+<body>
+	<h1>Galery</h1>
+	<div id="tags" class="tags">&nbsp;</div>
+	<div id="thumbs" class="thumbs">&nbsp;</div>
+	<div id="image" class="image">&nbsp;</div>
+</body>
+</html>

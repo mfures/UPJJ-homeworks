@@ -1,0 +1,43 @@
+This is sample text.
+sad se malo igram sa \ evo jedan \{$bok mama, da dobro sam. Da mama, jeo sam. Ne mama, nisam gladan. Dobro mama, budem$}{
+{$ FOR i 1 10 1 $}
+ This is {$= i $}-th time this message is generated.
+{$END$}
+{$FOR i 0 10 2 $}
+{$FOR i "\"\"\"
+ASD\"" 3.5 2 $}
+ sin({$=i$}^2) = {$= i i * @sin_233AS 10000000 "SSS0.000 i tu malo isprobavam \\ evo ide jedan\"" @decfmt $}
+{$END$}TU SAM U ISTOM REDU
+LUPIO SAM ENTER
+{$END$}
+{$= VERY_NICE SUCH_EXAMPLE MUCH_WOW$}
+U slobodno vrijeme testiram parser. Mogao sam sada spavati. Ovo je bio neki test!
+{$FOR I 1 2 3$}
+A
+{$FOR I 1 2 3$}
+B
+{$FOR I 1 2 3$}
+C
+{$FOR I 1 2 3$}
+D
+{$FOR I 1 2 3$}
+E
+{$FOR I 1 2 3$}
+I TAKO
+{$FOR I 1 2 3$}
+IDE
+{$END$}
+TO
+{$END$}
+LAGANINI
+{$END$}
+SKORO
+{$END$}
+SAM
+{$END$}
+GOTOV
+{$END$}
+IIII
+{$END$}
+TJT
+BOK!

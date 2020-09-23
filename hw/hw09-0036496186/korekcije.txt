@@ -1,0 +1,2 @@
+U zadatku 2 promijenjen izračun "offseta" iz height*y+x u width*y+x
+U zadatku 3 promijenjen izračun "offseta" iz height*y+x u width*y+x te promjenjen izračun vektora osi jer je dolazilo do zrcaljenja slike

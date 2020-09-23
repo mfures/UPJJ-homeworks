@@ -1,0 +1,60 @@
+akainu.jpg
+Akainu
+marine, admiral
+aokiji.jpg
+Aokiji
+marine, admiral
+brook.jpg
+Brook
+pirate, Strawhats
+choper.jpg
+Choper
+pirate, Strawhats
+coby.jpg
+Coby
+marine, captain
+franky.jpg
+Franky
+pirate, Strawhats
+fujitora.jpg
+Fujitora
+marine, admiral
+jinbei.jpg
+Jinbei
+pirate, Strawhats
+kaido.jpg
+Kaido
+pirate, yonko
+kid.jpg
+Captain Kid
+pirate, captain
+kizaru.jpg
+Kizaru
+marine, admiral
+law.jpg
+Law
+pirate, captain
+luffy.jpg
+Monkey D. Luffy
+pirate, captain, yonko, Strawhats
+nami.jpg
+Nami
+pirate, Strawhats
+robin.jpg
+Nico Robin
+pirate, Strawhats
+sanji.jpg
+Vinsmoke Sanji
+pirate, Strawhats
+shanks.jpg
+Shanks
+pirate, yonko
+smoker.jpg
+Smoker
+marine, captain
+usopp.jpg
+Usopp
+pirate, Strawhats
+zorro.jpg
+Zorro
+pirate, Strawhats
